@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Banking System</title>
+
+    <!--starting of  Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Gabriela&display=swap" rel="stylesheet">
+
+    <!--end of  Bootstrap-->
+    <link rel="icon" href="./img/icon.jpg">
+    <!--start of css part-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
+            font-family: sans-serif;
+        }
+        
+        #header {
+            height: 100vh;
+            background-image: url(./img/background.jfif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .container {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        
+        .logo {
+            margin-top: 30px;
+            width: 100px;
+        }
+        
+        .header-text {
+            max-width: 350px;
+            margin-top: 140px;
+            justify-content: center;
+            position: absolute;
+            margin-left: 50px;
+        }
+        
+        h1 {
+            font-size: 24px;
+        }
+        
+        .square {
+            height: 12px;
+            width: 12px;
+            display: inline-block;
+            background: #f67c92;
+            margin: 15px 0;
+        }
+        
+        .button {
+            padding: 18px 40px;
+            background: transparent;
+            outline: none;
+            border: 2px solid navy;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        p {
+            font-size: 15px;
+            line-height: 18px;
+            color: black;
+        }
+        
+        .header-text button {
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+        
+        .line-1 {
+            width: 15px;
+            height: 15px;
+            background: #f67c92;
+            display: inline-block;
+        }
+        
+        .line-2 {
+            width: 80px;
+            height: 1px;
+            background: #f67c92;
+            display: inline-block;
+        }
+        
+        .line-3 {
+            width: 60px;
+            height: 1px;
+            background: #f67c92;
+            display: inline-block;
+        }
+        
+        .line {
+            line-height: 8px;
+        }
+        
+        #sideNav {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            right: -250px;
+            top: 0;
+            background: #863544;
+            z-index: 2;
+            transition: .5s;
+        }
+        
+        nav ul li {
+            list-style: none;
+            margin: 50px 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        #menuBtn {
+            width: 50px;
+            position: fixed;
+            right: 65px;
+            top: 35px;
+            z-index: 2;
+            cursor: pointer;
+        }
+        
+        .logoParent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+        }
+        
+        .title {
+            margin-bottom: -5px;
+            margin-left: 20px;
+            font-family: 'Gabriela', sans-serif;
+            font-size: 27px;
+        }
+        
+        #features {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-top: 100px;
+        }
+        
+        .feature-row {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .feature-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 300px;
+        }
+        
+        .feature-col img {
+            width: 200px;
+        }
+        
+        .feature-col>a {
+            display: inline-block;
+        }
+        /**media query**/
+        
+        @media(max-width:450px) {
+            .container {
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+            #header {
+                min-height: 100vh;
+                background-image: none;
+            }
+            .header-text {
+                margin-top: 20px;
+            }
+            #menuBtn {
+                right: 20px;
+            }
+            #features {
+                margin-top: -20px;
+            }
+            .button {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media(max-width:1000px) {
+            #header {
+                background-size: cover;
+                height: 100%;
+            }
+        }
+    </style>
+    <!--end of css part-->
+</head>
+
+<body>
+    <section id="header">
+        <div class="container">
+            <div class="logoParent">
+                <div><img src="./img/icon.jpg" class="logo"></div>
+                <div class="title">TSF Bank</div>
+            </div>
+        </div>
+
+        <div class="header-text">
+            <h1> access your account<br>just in one touch</h1>
+            <span class="square"></span>
+            <p>No more waiting in the long queues ,transfer the money very conveniently with the help of our Sparks Bank System , a digital wallet platform and online payment system developed to power in-app, online, and in-person contactless transactions
+                with mobile phones.</p>
+            <a href="register.php"><button class="button">Register Yourself</button></a>
+
+            <div class="line">
+                <span class="line-1"></span><br> <br>
+                <span class="line-2"></span><br> <br>
+                <span class="line-2"></span>
+            </div>
+        </div>
+    </section>
+    <nav id="sideNav">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="users.php">OUR CUSTOMERS</a></li>
+            <li><a href="history.php">TRANSACTION HISTORY</a></li>
+            <li><a href="users.php">TRANSFER MONEY</a></li>
+            <li><a href="register.php">NEW USER</a></li>
+        </ul>
+    </nav>
+    <img src="./img/menu.png" id="menuBtn">
+
+    <!--features-->
+    <section id="features">
+        <div class="feature-row">
+            <div class="feature-col">
+                <img src="./img/customer.jfif">
+                <a href="users.php"><button class="button">Our Customers</button></a>
+            </div>
+
+            <div class="feature-col">
+                <img src="./img/history.jpg">
+                <a href="users.php"><button class="button">Transaction History</button></a>
+            </div>
+            <div class="feature-col">
+                <img src="./img/transfer.jfif">
+                <a href="users.php"><button class="button">Transfer Money</button></a>
+            </div>
+        </div>
+    </section>
+    <footer style="background: #111;
+    color: white;
+    height: 2%;
+    bottom: -34px;">
+        <marquee behavior="scroll" direction="right"> TSF GRIP TASK 1 DONE BY <span class="far fa-copyright"></span> RAHUL KUMAR</marquee>
+    </footer>
+    <!--js-->
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+        sideNav.style.right = "-250px";
+        menuBtn.onclick = function() {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0px";
+            } else {
+                sideNav.style.right = "-250px";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
